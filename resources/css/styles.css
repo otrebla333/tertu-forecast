@@ -107,21 +107,21 @@ html, body {
   max-width: 1080px;
 }
 
-.demo-charts {
+.profile-pics {
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
 }
-.demo-chart:nth-child(1) {
+.profile-pic:nth-child(1) {
   color: #ACEC00;
 }
-.demo-chart:nth-child(2) {
+.profile-pic:nth-child(2) {
   color: #00BBD6;
 }
-.demo-chart:nth-child(3) {
+.profile-pic:nth-child(3) {
   color: #BA65C9;
 }
-.demo-chart:nth-child(4) {
+.profile-pic:nth-child(4) {
   color: #EF3C79;
 }
 .demo-graphs {
@@ -216,4 +216,26 @@ _:-ms-input-placeholder, :root .demo-graph {
 .header-title {
   font-family: 'Pacifico', serif;
   font-size: 2.5em;
+}
+.img-circular{
+ width: 200px;
+ height: 200px;
+ background-image: url('../img/p4-min.jpg');
+ background-size: cover;
+ /* display: block; */
+ border-radius: 100px;
+}
+.profile-pic{
+	text-align:center;
+}
+.img-pic{
+  width: 200px;
+  height: 200px;
+  /* border-radius: 100px; */
+  border-radius: 50%;
+  display: inline;
+}
+#img-bw{
+	-webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+    filter: grayscale(100%);
 }
