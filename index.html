@@ -23,6 +23,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=no">
     <title>Tertu Forecast</title>
 
+	<!-- Link web manifest -->
+	<link rel="manifest" href="/manifest.webmanifest">
+
     <!-- Add to homescreen for Chrome on Android -->
     <meta name="mobile-web-app-capable" content="yes">
     <link rel="icon" sizes="192x192" href="resources/img/android-desktop.png">
@@ -30,7 +33,7 @@
     <!-- Add to homescreen for Safari on iOS -->
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <meta name="apple-mobile-web-app-title" content="Material Design Lite">
+    <meta name="apple-mobile-web-app-title" content="Tertu Forecast">
     <link rel="apple-touch-icon-precomposed" href="resources/img/ios-desktop.png">
 
     <!-- Tile icon for Win8 (144x144 + tile color) -->
@@ -51,13 +54,11 @@
     <link rel="stylesheet" href="resources/css/styles.css" type="text/css">
   </head>
   <body>
-    <script src="//cdn.jsdelivr.net/chartist.js/latest/chartist.min.js"></script>
-
     <div class="demo-layout mdl-layout mdl-js-layout mdl-layout--fixed-drawer mdl-layout--fixed-header">
       <!-- Header -->
       <header class="demo-header mdl-layout__header mdl-color--grey-100 mdl-color-text--grey-600">
         <div class="mdl-layout__header-row">
-          <span class="mdl-layout-title header-title">Tertu Forecast<i class="fas fa-beer fa-lg" style="padding-left:0.5em"></i></span>
+          <span class="mdl-layout-title header-title">Tertu Forecast</span>
           <div class="mdl-layout-spacer"></div>
           <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" id="hdrbtn">
             <i class="material-icons">more_vert</i>
@@ -98,6 +99,34 @@
       </div>
       <main class="mdl-layout__content mdl-color--grey-100">
         <div class="mdl-grid demo-content">
+			<!-- Cards test -->
+			<div class="mdl-cell mdl-cell--12-col mdl-grid">
+				<div class="mdl-shadow--2dp mdl-color-white mdl-cell mdl-cell--4-col mdl-cell--3-col-desktop">
+					<h2>Lorem ipsum dolor</h2>
+					<div class="mdl-card__actions mdl-card--border">
+						<p>Max Min</p>
+					</div>
+				</div>
+				<div class="mdl-shadow--2dp mdl-color-white mdl-cell mdl-cell--4-col mdl-cell--3-col-desktop">
+					<h2>Lorem ipsum dolor</h2>
+					<div class="mdl-card__actions mdl-card--border">
+						<p>Max Min</p>
+					</div>
+				</div>
+				<div class="mdl-shadow--2dp mdl-color-white mdl-cell mdl-cell--4-col mdl-cell--3-col-desktop">
+					<h2>Lorem ipsum dolor</h2>
+					<div class="mdl-card__actions mdl-card--border">
+						<p>Max Min</p>
+					</div>
+				</div>
+				<div class="mdl-shadow--2dp mdl-color-white mdl-cell mdl-cell--4-col mdl-cell--3-col-desktop">
+					<h2>Lorem ipsum dolor</h2>
+					<div class="mdl-card__actions mdl-card--border">
+						<p>Max Min</p>
+					</div>
+				</div>
+			</div>
+		  <!-- Profile pics -->
           <div class="profile-pics mdl-color--white mdl-shadow--2dp mdl-cell mdl-cell--12-col mdl-grid">
 			<div class="profile-pic mdl-cell mdl-cell--4-col mdl-cell--3-col-desktop">
 				<p style="text-align:center">Person1</p>
@@ -128,6 +157,7 @@
           <div class="demo-graphs mdl-shadow--2dp mdl-color--white mdl-cell mdl-cell--8-col">
             <div id="chart1" class="ct-chart ct-golden-section"></div>
 			<div id="chart2" class="ct-chart ct-golden-section"></div>
+			<canvas id="canvas"></canvas>
           </div>
           <div class="demo-cards mdl-cell mdl-cell--4-col mdl-cell--8-col-tablet mdl-grid mdl-grid--no-spacing">
             <div class="demo-updates mdl-card mdl-shadow--2dp mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--12-col-desktop">
@@ -181,5 +211,6 @@
     <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
     <script src="http://cdn.jsdelivr.net/chartist.js/latest/chartist.min.js"></script>
     <script src="resources/js/charts.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
   </body>
 </html>
