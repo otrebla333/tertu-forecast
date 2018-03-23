@@ -108,9 +108,9 @@ html, body {
 }
 
 .profile-pics {
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
+  /* -webkit-align-items: center; */
+      /* -ms-flex-align: center; */
+          /* align-items: center; */
 }
 .profile-pic:nth-child(1) {
   color: #ACEC00;
@@ -227,15 +227,59 @@ _:-ms-input-placeholder, :root .demo-graph {
 }
 .profile-pic{
 	text-align:center;
+	display:block;
+	clear:both;
+	
 }
-.img-pic{
-  width: 200px;
-  height: 200px;
+.profile-pic img{
   /* border-radius: 100px; */
+  height:150px;
+  width:auto;
   border-radius: 50%;
-  display: inline;
 }
+
 #img-bw{
 	-webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
     filter: grayscale(100%);
+}
+
+.img-forecast.day0{
+	height: 200px;
+	background-image: url("../img/maps/retro_ponent_1.jpg");
+	background-size: cover;
+}
+
+.img-forecast.day1{
+	height: 200px;
+	background-image: url("../img/maps/retro_ponent_2.jpg");
+	background-size: cover;
+}
+
+.img-forecast.day2{
+	height: 200px;
+	background-image: url("../img/maps/retro_ponent_3.jpg");
+	background-size: cover;
+}
+
+.img-forecast.day3{
+	height: 200px;
+	background-image: url("../img/maps/retro_ponent_4.jpg");
+	background-size: cover;
+}
+
+.img-forecast.day4{
+	height: 200px;
+	background-image: url("../img/maps/retro_ponent_5.jpg");
+	background-size: cover;
+}
+
+.img-forecast.day5{
+	height: 200px;
+	background-image: url("../img/maps/retro_xaloc_3.jpg");
+	background-size: cover;
+}
+
+.text-forecast{
+	border-top: 500px;
+	font-weight: 500;
 }
