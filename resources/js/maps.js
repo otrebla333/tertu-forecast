@@ -11,16 +11,17 @@ function getRandomInt(min, max) {
 function create_forecast() {
 	var i = 0;
 	var map_html = "";
+    var tertu_days = ["27 3", "6 4", "13 4", "19 4", "26 4"];
 
-	for (i=0; i<6; i++){
+	for (i=0; i<20; i++){
 		var map_style = ["night", "retro", "std"];
 		var wind_type = ["xaloc", "gregal", "ponent"];
 		var map_nums = ["1", "2", "3", "4", "5"];
 		
 		var map_date = moment().add(i, "days").format('dddd D');
-		
-		if (moment().add(i, "days").format('dddd') == "Tuesday") {
-			map_img = "resources/img/maps/std_ponent_5.jpg";
+
+		if (tertu_days.includes(moment().add(i, "days").format('D M'))) {
+			map_img = "resources/img/maps/std_" + wind_type[moment().add(i, "days").format('D')%3] + "_5.jpg";
 		}
 		else {
 			map_img = "resources/img/maps/std_" + wind_type[getRandomInt(0, 2)] + "_" + getRandomInt(1, 3) + ".jpg";
