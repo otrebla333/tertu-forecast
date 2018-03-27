@@ -13,7 +13,7 @@ function create_forecast() {
 	var map_html = "";
     var tertu_days = ["27 3", "6 4", "13 4", "19 4", "26 4"];
 
-	for (i=0; i<20; i++){
+	for (i=0; i<6; i++){
 		var map_style = ["night", "retro", "std"];
 		var wind_type = ["xaloc", "gregal", "ponent"];
 		var map_nums = ["1", "2", "3", "4", "5"];
