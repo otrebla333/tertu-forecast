@@ -53,7 +53,7 @@ function weather_success(weather) {
   + weather.code + '"></i></h2>';
   forecast_html+='</div>'
 
-  //document.getElementById("weather").innerHTML = forecast_html;
+  // document.getElementById("weather").innerHTML = forecast_html;
 }
 
 function get_weather_forecast() {

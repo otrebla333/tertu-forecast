@@ -25,20 +25,15 @@
   <title>Tertu Forecast</title>
 
   <!-- Link web manifest -->
-  <link rel="manifest" href="/manifest.json">
+  <link rel="manifest" href="/manifest.webmanifest">
 
   <!-- Add to homescreen for Chrome on Android -->
   <meta name="mobile-web-app-capable" content="yes">
   <link rel="icon" sizes="192x192" href="resources/img/android-desktop.png">
 
   <!-- Add to homescreen for Safari on iOS -->
-  <meta name="mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="theme-color" content="#5395c9">
-  <meta name="msapplication-navbutton-color" content="#5395c9">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-  <meta name="msapplication-starturl" content="/index.html">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
   <meta name="apple-mobile-web-app-title" content="Tertu Forecast">
   <link rel="apple-touch-icon-precomposed" href="resources/img/ios-desktop.png">
 
@@ -59,19 +54,9 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Pacifico">
   <link rel="stylesheet prefetch" href="http://cdn.jsdelivr.net/chartist.js/latest/chartist.min.css">
   <link rel="stylesheet" href="resources/css/styles.css" type="text/css">
-  <link rel="stylesheet" href="resources/css/weather-icons.css" type="text/css">
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js" type="text/javascript"></script>
 </head>
 
 <body>
-
-  <!-- Toast notification -->
-  <div id="toast-notification" class="mdl-js-snackbar mdl-snackbar">
-      <div class="mdl-snackbar__text"></div>
-      <button class="mdl-snackbar__action" type="button"></button>
-    </div>
-
   <div class="demo-layout mdl-layout mdl-js-layout mdl-layout--fixed-drawer mdl-layout--fixed-header">
     <!-- Header -->
     <header class="demo-header mdl-layout__header mdl-color--grey-100 mdl-color-text--grey-600">
@@ -115,69 +100,18 @@
       </nav>
     </div>
     <main class="mdl-layout__content mdl-color--grey-100">
-      <div class="mdl-cell mdl-cell--12-col mdl-grid" id="weather"></div>
-      <div class="mdl-cell mdl-cell--12-col mdl-grid" id="forecast-maps">
-        <!-- This should be replaced by javascript forecast -->
-        <h4 style="text-align:right;">Loading forecast...</h4>
-      </div>
-      <!-- Extra cards -->
-      <!-- <div class="demo-cards mdl-cell mdl-cell--4-col mdl-cell--8-col-tablet mdl-grid mdl-grid--no-spacing"> -->
-      <div class="mdl-cell mdl-cell--12-col mdl-grid">
-        <div class="demo-updates mdl-card mdl-shadow--2dp mdl-cell mdl-cell--4-col mdl-cell--8-col-tablet mdl-cell--6-col-desktop">
-          <div class="mdl-card__title mdl-card--expand mdl-color--teal-300">
-            <h2 class="mdl-card__title-text">Updates</h2>
-          </div>
-          <div class="mdl-card__supporting-text mdl-color-text--grey-600">
-            Tertu Forecast en versió beta. Buscant la titularitat des de la distància.<br><br> Properament més info sobre la sessió de fotos oficial.
-          </div>
-          <div class="mdl-card__actions mdl-card--border">
-            <a href="#" id="notbtn" class="mdl-button mdl-js-button mdl-js-ripple-effect">Read More</a>
-          </div>
-        </div>
-        <div class="demo-options mdl-card mdl-color--deep-purple-500 mdl-shadow--2dp mdl-cell mdl-cell--4-col mdl-cell--8-col-tablet mdl-cell--6-col-desktop">
-          <div class="mdl-card__supporting-text mdl-color-text--blue-grey-50">
-            <h3>Menú</h3>
-            <ul>
-              <li>
-                <label for="chkbox1" class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
-                      <input type="checkbox" id="chkbox1" class="mdl-checkbox__input" checked>
-                      <span class="mdl-checkbox__label">Cervesa</span>
-                    </label>
-              </li>
-              <li>
-                <label for="chkbox2" class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
-                      <input type="checkbox" id="chkbox2" class="mdl-checkbox__input" checked>
-                      <span class="mdl-checkbox__label">Braves</span>
-                    </label>
-              </li>
-              <li>
-                <label for="chkbox3" class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
-                      <input type="checkbox" id="chkbox3" class="mdl-checkbox__input">
-                      <span class="mdl-checkbox__label">Calamars vegans</span>
-                    </label>
-              </li>
-              <li>
-                <label for="chkbox4" class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
-                      <input type="checkbox" id="chkbox4" class="mdl-checkbox__input">
-                      <span class="mdl-checkbox__label">Lo vegetal con bacalao</span>
-                    </label>
-              </li>
-            </ul>
+        <div class="mdl-cell mdl-cell--12-col mdl-grid" id="weather">
+          <div class="mdl-shadow--2dp mdl-color-white mdl-cell mdl-cell--4-col">
+            <div id="heatmap"></div>
           </div>
         </div>
       </div>
-  </div>
-  </main>
+    </main>
   </div>
   <script src="vendors/mdl/material.min.js"></script>
   <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
-  <script src="http://cdn.jsdelivr.net/chartist.js/latest/chartist.min.js"></script>
-  <script src="vendors/momentjs/moment-with-locales.js"></script>
-  <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
-  <script src='https://cdn.rawgit.com/monkeecreate/jquery.simpleWeather/master/jquery.simpleWeather.min.js'></script>
-  <script src="resources/js/forecast.js"></script>
-  <script src="resources/js/scripts.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/heatmap.js/2.0.2/heatmap.min.js"></script>
+  <script src="resources/js/map.js"></script>
 </body>
 
 </html>
