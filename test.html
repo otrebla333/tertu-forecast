@@ -54,6 +54,7 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Pacifico">
   <link rel="stylesheet prefetch" href="http://cdn.jsdelivr.net/chartist.js/latest/chartist.min.css">
   <link rel="stylesheet" href="resources/css/styles.css" type="text/css">
+
 </head>
 
 <body>
@@ -98,10 +99,46 @@
         <div class="mdl-layout-spacer"></div>
         <a class="mdl-navigation__link" href=""><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">help_outline</i><span class="visuallyhidden">Help</span></a>
       </nav>
-    </div>
+    </div
     <main class="mdl-layout__content mdl-color--grey-100">
         <div class="mdl-cell mdl-cell--12-col mdl-grid" id="weather">
           <div class="mdl-shadow--2dp mdl-color-white mdl-cell mdl-cell--4-col" id="heatmap">
+          </div>
+          <!-- Sliders -->
+          <div class="mdl-cell mdl-cell--3-col">
+            <input class="mdl-slider mdl-js-slider" type="range"
+              min="0" max="100" value="25" tabindex="0" id="x-slider">
+          </div>
+          <div class="mdl-cell mdl-cell--1-col">
+            <p id="x-val">x</p>
+          </div>
+          <div class="mdl-cell mdl-cell--3-col">
+            <input class="mdl-slider mdl-js-slider" type="range"
+              min="0" max="100" value="25" tabindex="0" id="y-slider">
+          </div>
+          <div class="mdl-cell mdl-cell--1-col">
+            <p id="y-val">x</p>
+          </div>
+          <div class="mdl-cell mdl-cell--3-col">
+            <input class="mdl-slider mdl-js-slider" type="range"
+              min="0" max="100" value="25" tabindex="0" id="i-slider">
+          </div>
+          <div class="mdl-cell mdl-cell--1-col">
+            <p id="i-val">x</p>
+          </div>
+          <div class="mdl-cell mdl-cell--3-col">
+            <input class="mdl-slider mdl-js-slider" type="range"
+              min="0" max="100" value="25" tabindex="0" id="s-slider">
+          </div>
+          <div class="mdl-cell mdl-cell--1-col">
+            <p id="sy-val">x</p>
+          </div>
+          <div class="mdl-cell mdl-cell--3-col">
+            <input class="mdl-slider mdl-js-slider" type="range"
+              min="0" max="100" value="25" tabindex="0" id="slide">
+          </div>
+          <div class="mdl-cell mdl-cell--1-col">
+            <div id="sliderAmount">x</div>
           </div>
         </div>
       </div>
@@ -111,6 +148,7 @@
   <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/heatmap.js/2.0.2/heatmap.min.js"></script>
   <script src="resources/js/map.js"></script>
+  <script src="resources/js/scripts.js"></script>
 </body>
 
 </html>

@@ -299,3 +299,13 @@ _:-ms-input-placeholder, :root .demo-graph {
   background-image: url('../img/maps/map.jpg');
   background-size: cover;
 }
+
+drawer-item{
+  padding-right:35px;
+  padding-left:3px;
+}
+
+.loading-txt {
+  text-align: right;
+  font-size: 1em;
+}

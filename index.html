@@ -108,8 +108,8 @@
       </header>
       <!-- Drawer Navigation Menu -->
       <nav class="demo-navigation mdl-navigation mdl-color--blue-grey-800">
-        <a class="mdl-navigation__link" href="/"><i class="mdl-color-text--blue-grey-400 fas fa-chart-line fa-lg" style="padding-right:35px; padding-left:3px"></i>Forecast</a>
-        <a class="mdl-navigation__link" href="team.html"><i class="mdl-color-text--blue-grey-400 fas fa-trophy fa-lg" style="padding-right:35px; padding-left:3px"></i>Team</a>
+        <a class="mdl-navigation__link" href="/"><i class="mdl-color-text--blue-grey-400 fas fa-chart-line fa-lg drawer-item"></i>Forecast</a>
+        <a class="mdl-navigation__link" href="team.html"><i class="mdl-color-text--blue-grey-400 fas fa-trophy fa-lg drawer-item"></i>Team</a>
         <div class="mdl-layout-spacer"></div>
         <a class="mdl-navigation__link" href=""><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">help_outline</i><span class="visuallyhidden">Help</span></a>
       </nav>
@@ -118,7 +118,9 @@
       <div class="mdl-cell mdl-cell--12-col mdl-grid" id="weather"></div>
       <div class="mdl-cell mdl-cell--12-col mdl-grid" id="forecast-maps">
         <!-- This should be replaced by javascript forecast -->
-        <h4 style="text-align:right;">Loading forecast...</h4>
+        <p class="loading-txt">Loading forecast...
+          <i class="fas fa-spinner fa-pulse"></i>
+        </p>
       </div>
       <!-- Extra cards -->
       <!-- <div class="demo-cards mdl-cell mdl-cell--4-col mdl-cell--8-col-tablet mdl-grid mdl-grid--no-spacing"> -->

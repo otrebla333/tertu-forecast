@@ -8,4 +8,10 @@ function show_notification(){
 	);
 }
 
-window.onload = show_notification;
+//window.onload = show_notification;
+
+
+var slide = document.getElementById('x-slider');
+slide.onchange = function() {
+	document.getElementById('x-val').innerHTML = document.getElementById('x-slider').value;
+}
