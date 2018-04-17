@@ -11,7 +11,7 @@ function weather_success(weather) {
 
   var i = 0;
   var map_html = "";
-  var tertu_days = ["27 3", "6 4", "13 4", "19 4", "26 4"];
+  var tertu_days = ["27 3", "6 4", "13 4", "19 4", "26 4", "17 4"];
 
 // Weather forecast
   for (i = 0; i < 6; i++) {
